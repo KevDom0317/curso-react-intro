@@ -1,6 +1,10 @@
+import './CreateTodoBTN.css'
+
 function CreateTodoBTN(){
     return (
-        <button>+</button>
+        <button className='CreateTodoBTN'
+        onClick={
+            () => alert('Le diste click') }> + </button>
     );
     }
     export {CreateTodoBTN};

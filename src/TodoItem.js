@@ -1,13 +1,19 @@
+import './TodoItem.css'
+
 function TodoItem(props){
     return (
-    <li>
-        <span>
-        {props.Complete}
+    <li className='TodoItem'>
+        <span className={`Icon Icon-check
+            ${props.Complete && "Icon-check--active"}`}
+            onClick={props.onComplete}
+            >
+                V
         </span>
-        <p>
+        <p className={`TodoItem-p
+        TodoItem-p--complete`}>
         {props.text}
         </p>
-        <span>
+        <span className="Icon Icon-delete">
         x
         </span>
     </li>
